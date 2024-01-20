@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(#FFFFFF, #F6F7FB);
+    display: flex;
+    justify-content: center;
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+}
+
+/* header section */
+
+header {
+    display: flex;
+    justify-content: space-between;    
+}
+
+/* Content style (dog post) */
+
+#dog-post {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 680px;
+    background-image: url('images/dog-teddy.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1em;
+}
+
+#dog-post h1,
+#dog-post p {
+    margin: 0;
+    padding: 0;
+}
+
+#dog-post h1 {
+    color: #F8F8F8;
+    font-size: 1.5rem;
+}
+
+#dog-post p {
+    color: #B7B7B7;
+    font-size: 1.25rem;
+}
+
+/* container style */
+
+.container {
+    width: 95%;
+    max-width: 920px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+/* Buttons Style */
+
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+}
+
+button {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 30px gray;
+    padding: 2em;
+
+    /* Center the text inside the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dislike-btn:hover {
+    background: #FFE7EF;
+}
+
+#like-btn:hover {
+    background: #DBFFF4;
+}
+
+/* Images style */
+
+#badge-img {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    width: 200px;
+    height: 100px;
+    transform: rotate(-30deg);
+}
+
+.profile, 
+.chat,
+.logo,
+button img {
+    width: 8vw;
+    height: 8vw;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.logo {
+    width: 16vw;
+    max-width: 160px;
+}
+
+/* Media queries */
+
+@media (min-width: 500px) {
+    #dog-post {
+        height: 85vh;
+        min-height: 920px;
+        max-height: 1200px;
+    }
+
+    #badge-img {
+        top: 70px;
+        left: 25px;
+        width: 300px;
+        height: 150px;
+    }
+
+    button {
+        padding: 3em;
+    }
+}
+
+@media (min-width: 720px) {
+    html {
+        zoom: 78%
+    }
+    
+    #badge-img {
+        top: 105px;
+        left: 35px;
+        width: 450px;
+        height: 225px;
+    }
+
+    button {
+        padding: 4em;
+    }
+}
+
+@media (min-width: 980px) {
+    #badge-img {
+        top: 120px;
+        left: 40px;
+        width: 500px;
+        height: 250px;
+    }
+
+    button {
+        padding: 5em;
+    }
+}
